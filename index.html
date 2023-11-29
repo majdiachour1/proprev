@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title> Product Review Card Component </title>
+
+    <style>
+        :root {
+        --cream: hsl(30, 38%, 92%);
+        --Darkcyan: hsl(158, 36%, 37%);
+        --Verydarkblue: hsl(212, 21%, 14%);
+        --Darkgrayishblue: hsl(228, 12%, 48%);
+        --White: hsl(0, 0%, 100%)
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            src: url(https://fonts.google.com/specimen/Montserrat);}
+
+        @font-face {
+            font-family: Fraunces;
+            src: url(https://fonts.google.com/specimen/Fraunces);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-y: hidden;
+            background-color: var(--cream);
+            font-size: 14px;
+            font-family: Montserrat;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 480px;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            position: relative;
+        }
+
+        .pic {
+            position: relative;
+            background-image:url(https://i.ibb.co/ypCtdnN/image-product-desktop.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        .pic, .info {
+            height: auto;
+            width: auto;
+        }
+
+        .info {
+            position: relative;
+            border-radius: 20px;
+            display: grid;
+            grid-template-rows: 15% 27% 25% 13% 20%;
+            padding-left: 25px;
+            box-sizing: border-box;
+        }
+
+        .category {
+            letter-spacing: 6px;
+            color: var(--Darkgrayishblue);
+            padding-top: 30px;
+        }
+
+        .title {
+           padding-right: 30px;
+           font-weight:700;
+           font-size: 30px;
+        }
+
+        .description {
+            color: var(--Darkgrayishblue);
+            line-height: 25px;
+            padding-right: 35px;
+        }
+
+        .price {
+            display:grid;
+            grid-template-columns: 50% 50%;
+            padding-top: 0px;
+        }
+
+        .new-price {
+            color:darkcyan;
+            font-weight: 700;
+            font-size: 32px;
+            font-family: Montserrat;
+        }
+
+        .old-price {
+            padding-top: 10px;
+            text-decoration:line-through;
+            color: var(--Darkgrayishblue);
+        }
+
+        .cart-button {
+            margin-top: 10px;
+            width: 230px;
+            height: 50px;
+            color:white;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        .cart-button:hover {
+            cursor: pointer;
+        }
+
+        
+        @media screen and (max-width: 375px) {
+                .grid {
+                    height:90vh;
+                    grid-template-rows: 200px 500px;
+                    grid-template-columns: 1fr;
+                } 
+
+                .info {
+                    width: 350px;
+                    grid-template-rows: 60px 90px 110px 50px 50px;
+                }
+
+                .cart-button {
+                    width: 300px;
+                }
+            }
+    </style>
+</head>
+
+<body>
+<div class="grid">
+    <div class="pic"><height="100%" width="100%" object-fit="cover" alt="image-product-desktop" border="0"></a> </div>
+
+    <div class="info"> 
+        <div class="category"> PERFUME </div> 
+        <div class="title"> Gabrielle Essence Eau De Parfum </div>
+        <div class="description"> A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the house of CHANEL.</div>
+        <div class="price"> <div class="new-price"> $149.99 </div> <div class="old-price"> $169.99 </div> </div>
+        <div> <button class="cart-button"> Add to Cart </button> </div>
+    </div>
+
+</div>
+</body>
+
+
+</html>
